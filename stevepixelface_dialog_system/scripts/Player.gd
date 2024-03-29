@@ -4,7 +4,7 @@ const Speed = 24
 
 @onready var animSprite = $AnimSprite
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var dir_h = Input.get_axis("ui_left", "ui_right")
 	
 	if dir_h < 0:

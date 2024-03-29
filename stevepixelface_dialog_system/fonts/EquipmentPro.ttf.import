@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dayvqh5byxufm"
-path="res://.godot/imported/EquipmentPro.ttf-9fb12949ed8649af54601dc23491117c.fontdata"
+path="res://.godot/imported/EquipmentPro.ttf-7d6b232acec84c97a43ce8e2f55bd080.fontdata"
 
 [deps]
 
-source_file="res://Examples/stevepixelface_dialog_system/fonts/EquipmentPro.ttf"
-dest_files=["res://.godot/imported/EquipmentPro.ttf-9fb12949ed8649af54601dc23491117c.fontdata"]
+source_file="res://fonts/EquipmentPro.ttf"
+dest_files=["res://.godot/imported/EquipmentPro.ttf-7d6b232acec84c97a43ce8e2f55bd080.fontdata"]
 
 [params]
 

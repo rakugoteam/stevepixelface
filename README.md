@@ -3,7 +3,7 @@
 ![Stars](https://img.shields.io/github/stars/rakugoteam/RakuDialogueUI)
 ![Discord](https://img.shields.io/discord/484604562183815169?label=Rakugo&logo=discord&style=social)
 
-Is a [Godot](https://godotengine.org)'s project aiming to provide examples of use of [Rakugo Dialogue System](https://github.com/rakugoteam/Rakugo-Dialogue-System). You can simply take a look, or copy and customize them for your games !
+Here are some [Godot](https://godotengine.org)'s projects aiming to provide examples of use of [Rakugo Dialogue System](https://github.com/rakugoteam/Rakugo-Dialogue-System). You can simply take a look, or copy and customize them for your games !
 
 ## Examples
 
@@ -11,7 +11,7 @@ Is a [Godot](https://godotengine.org)'s project aiming to provide examples of us
 
 Inspired by this godot tutorial https://www.youtube.com/watch?v=Ur9j3c5_of0
 
-![stevepixeface_dialog_system](Examples/stevepixelface_dialog_system/stevepixelface_dialog_system.png)
+![stevepixeface_dialog_system](stevepixelface_dialog_system/stevepixelface_dialog_system.png)
 
 
 ## Infos

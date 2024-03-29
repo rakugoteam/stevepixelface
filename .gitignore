@@ -1,5 +1,5 @@
-/.godot/
-/.import/
-/.vscode/
-/.mono/
-mono_crash.*.json
+**/.godot/
+**/.import/
+**/.vscode/
+**/.mono/
+**/mono_crash.*.json

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q83ld42xw6bm"
-path="res://.godot/imported/Background.png-f0b538da99284041e34734b0922ea875.ctex"
+uid="uid://cmnu2ojjsm71j"
+path="res://.godot/imported/Player-Move.png-e10e9683ec893c1dfe8647164dc69560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Examples/stevepixelface_dialog_system/sprites/Background.png"
-dest_files=["res://.godot/imported/Background.png-f0b538da99284041e34734b0922ea875.ctex"]
+source_file="res://sprites/Player-Move.png"
+dest_files=["res://.godot/imported/Player-Move.png-e10e9683ec893c1dfe8647164dc69560.ctex"]
 
 [params]
 

@@ -20,8 +20,8 @@ rakugo/save_folder="user://saves"
 
 config/name="Rakugo Examples"
 config/description="Examples showing how you can use Rakugo Dialogue System in your games"
-run/main_scene=""
-config/features=PackedStringArray("4.1")
+run/main_scene="res://scenes/stevepixelface_dialog_system.tscn"
+config/features=PackedStringArray("4.2")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/fullsize=false
 config/icon="res://icon.png"

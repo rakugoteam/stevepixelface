@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tpa8i4nb3aeh"
-path="res://.godot/imported/Player-Idle.png-f78d90db120af1031567139e26beb60c.ctex"
+uid="uid://cufyww77dagmu"
+path="res://.godot/imported/stevepixelface_dialog_system.png-ccfedf704512c06cd1296771517886dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Examples/stevepixelface_dialog_system/sprites/Player-Idle.png"
-dest_files=["res://.godot/imported/Player-Idle.png-f78d90db120af1031567139e26beb60c.ctex"]
+source_file="res://stevepixelface_dialog_system.png"
+dest_files=["res://.godot/imported/stevepixelface_dialog_system.png-ccfedf704512c06cd1296771517886dd.ctex"]
 
 [params]
 

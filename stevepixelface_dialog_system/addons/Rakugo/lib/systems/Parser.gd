@@ -39,8 +39,9 @@ var Tokens := {
 var Regex := {
 	NAME = "[a-zA-Z][a-zA-Z_0-9]*",
 	NUMERIC = "-?[0-9]\\.?[0-9]*",
-	STRING = "\".*\"",
+	STRING = "\".+?\"",
 	VARIABLE = "((?<char_tag>{NAME})\\.)?(?<var_name>{NAME})",
+	ASSIGNMENT = "(?<assignment>=|\\+=|\\-=|\\*=|\\/=)"
 #	MULTILINE_STRING = "\"\"\"(?<string>.*)\"\"\"",
 }
 
@@ -59,13 +60,13 @@ var parser_regex :={
 	# character_tag? "say"
 	SAY = "^((?<character_tag>{NAME}) )?(?<text>{STRING})$",
 	# var_name = character_tag? "please enter text" 
-	ASK = "^(?<variable>{VARIABLE}) = ((?<character_tag>{NAME}) )?(?<question>{STRING}) \\? (?<default_answer>{STRING})$",
+	ASK = "^(?<variable>{VARIABLE})\\s*=\\s*\\?\\s*((?<character_tag>{NAME}) )?(?<question>{STRING})( (?<default_answer>{STRING}))?$",
 	# "like regex" (> label_name)?
 	CHOICE = "^(?<text>{STRING})( > (?<label>{NAME}))?$",
 	# jump label
 	JUMP = "^jump (?<label>{NAME})( if (?<expression>.+))?$",
 	# for setting Rakugo variables
-	SET_VARIABLE = "^(?<lvar_name>{VARIABLE}) = ((?<text>{STRING})|(?<number>{NUMERIC})|(?<rvar_name>{VARIABLE}))$",
+	SET_VARIABLE = "^(?<lvar_name>{VARIABLE})\\s*{ASSIGNMENT}\\s*((?<text>{STRING})|(?<number>{NUMERIC})|(?<rvar_name>{VARIABLE}))$",
 	# $ some_gd_script_code
 #	IN_LINE_GDSCRIPT = "^\\$.*",
 	# gdscript:
@@ -124,6 +125,10 @@ func count_indent(s:String) -> int:
 	
 	return ret
 
+func treat_string(s:String) -> String:
+	s = s.substr(1, s.length()-2)
+	return s.replace("\\n", "\n").replace("\\t", "\t")
+
 func parse_script(lines:PackedStringArray) -> Dictionary:
 	if lines.is_empty():
 		push_error("Parser, parse_script : lines is empty !")
@@ -160,8 +165,13 @@ func parse_script(lines:PackedStringArray) -> Dictionary:
 #
 #				for key in result.names:
 #					prints(" ", key, result.get_string(key))
-					
-				menu_choices.push_back(result)
+				
+				var dic_result := {
+					"text":treat_string(result.get_string("text")),
+					"label":result.get_string("label")
+				}
+
+				menu_choices.push_back(dic_result)
 				
 				if i == lines.size() - 1:
 					parse_array.push_back(["MENU", current_menu_result, menu_choices])
@@ -237,6 +247,34 @@ func parse_script(lines:PackedStringArray) -> Dictionary:
 
 						parse_array.push_back([key, result, expression, vars])
 
+					"SAY":
+						var dic_result := {
+							"text":treat_string(result.get_string("text")),
+							"character_tag":result.get_string("character_tag")
+						}
+
+						parse_array.push_back([key, dic_result])
+
+					"ASK":
+						var dic_result := {
+							"variable":result.get_string("variable"),
+							"character_tag":result.get_string("character_tag"),
+							"question":treat_string(result.get_string("question")),
+							"default_answer":treat_string(result.get_string("default_answer"))
+						}
+
+						parse_array.push_back([key, dic_result])
+
+					"SET_VARIABLE":
+						var dic_result := {
+							"lvar_name":result.get_string("lvar_name"),
+							"assignment":result.get_string("assignment"),
+							"rvar_name":result.get_string("rvar_name"),
+							"number":result.get_string("number"),
+							"text":treat_string(result.get_string("text"))
+						}
+
+						parse_array.push_back([key, dic_result])
 					_:
 						parse_array.push_back([key, result])
 				break

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cufyww77dagmu"
-path="res://.godot/imported/stevepixelface_dialog_system.png-5b7992cc335fe3dde5e0f53338adb2b6.ctex"
+uid="uid://q83ld42xw6bm"
+path="res://.godot/imported/Background.png-2a345e972bbd801a2b9c1fc260ec020b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Examples/stevepixelface_dialog_system/stevepixelface_dialog_system.png"
-dest_files=["res://.godot/imported/stevepixelface_dialog_system.png-5b7992cc335fe3dde5e0f53338adb2b6.ctex"]
+source_file="res://sprites/Background.png"
+dest_files=["res://.godot/imported/Background.png-2a345e972bbd801a2b9c1fc260ec020b.ctex"]
 
 [params]
 
