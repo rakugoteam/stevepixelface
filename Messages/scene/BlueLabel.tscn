@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc86lgq404gh3"]
+
+[ext_resource type="StyleBox" uid="uid://byr6rdaqfplvv" path="res://art/label_style_box.tres" id="1_k78nm"]
+[ext_resource type="Script" path="res://script/messageLabel.gd" id="1_nou3a"]
+[ext_resource type="Texture2D" uid="uid://cuvrolmg3lstw" path="res://art/s.png" id="2_t4sh5"]
+
+[node name="BlueLabel" type="VBoxContainer"]
+modulate = Color(0, 0.411765, 1, 1)
+custom_minimum_size = Vector2(270, 0)
+offset_right = 21.0
+offset_bottom = 57.0
+size_flags_horizontal = 0
+script = ExtResource("1_nou3a")
+metadata/_edit_horizontal_guides_ = [-74.0, -55.0]
+metadata/_edit_vertical_guides_ = [269.0]
+
+[node name="LabelName" type="Label" parent="."]
+layout_mode = 2
+
+[node name="LabelMessage" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = ExtResource("1_k78nm")
+text = "BlaBla"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_t4sh5")
+stretch_mode = 4

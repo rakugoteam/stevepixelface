@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c3wimiesx5d84"]
+
+[ext_resource type="PackedScene" uid="uid://bc86lgq404gh3" path="res://scene/BlueLabel.tscn" id="1_o7yus"]
+
+[node name="BlueLabel" instance=ExtResource("1_o7yus")]
+modulate = Color(1, 0.870588, 0.360784, 1)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -270.0
+offset_right = 0.0
+offset_bottom = 84.0
+grow_horizontal = 0
+size_flags_horizontal = 8
+alignment = 2
+
+[node name="TextureRect" parent="." index="2"]
+size_flags_horizontal = 8
+flip_h = true

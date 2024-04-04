@@ -1,10 +1,16 @@
 # Stevepixelface Example
 
+<<<<<<< HEAD
+Its a [Godot](https://godotengine.org)'s project aiming to provide example
+of use of [Rakugo Dialogue System](https://github.com/rakugoteam/Rakugo-Dialogue-System). 
+You can simply take a look, or copy and customize them for your games !
+=======
 Here are some [Godot](https://godotengine.org)'s projects aiming to provide examples of use of [Rakugo Dialogue System](https://github.com/rakugoteam/Rakugo-Dialogue-System). You can simply take a look, or copy and customize them for your games !
 
 ## Examples
 
 ### Stevepixelface
+>>>>>>> ce482af4 (Add Messages example)
 
 A short example inspired by this godot tutorial https://www.youtube.com/watch?v=Ur9j3c5_of0
 
@@ -13,8 +19,6 @@ A short example inspired by this godot tutorial https://www.youtube.com/watch?v=
 ### Messages
 
 A dialog between two characters about a key and a door...
-
-The dialog and artworks was made by [@Salty](https://github.com/salty64)
 
 ![messages](Messages/Messages.png)
 
